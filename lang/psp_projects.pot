@@ -1,0 +1,83 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Project Panorama BuddyPress / BuddyBoss Integration\n"
+"POT-Creation-Date: 2021-03-19 16:06-0400\n"
+"PO-Revision-Date: 2021-03-19 16:06-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: psp-buddyboss.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: lib/models.php:47
+msgid "Groups"
+msgstr ""
+
+#: lib/views.php:14 lib/views.php:34 lib/views.php:77
+#: lib/views/projects-groups.php:9
+msgid "Projects"
+msgstr ""
+
+#: lib/views.php:71
+msgid "New Project"
+msgstr ""
+
+#: lib/views/projects-groups.php:17
+msgid "This group doesn't have any projects"
+msgstr ""
+
+#: vendor/plugin-update-checker/Puc/v4p2/Plugin/UpdateChecker.php:358
+msgid "Check for updates"
+msgstr ""
+
+#: vendor/plugin-update-checker/Puc/v4p2/Plugin/UpdateChecker.php:405
+#, php-format
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr ""
+
+#: vendor/plugin-update-checker/Puc/v4p2/Plugin/UpdateChecker.php:407
+#, php-format
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr ""
+
+#: vendor/plugin-update-checker/Puc/v4p2/Plugin/UpdateChecker.php:409
+#, php-format
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: vendor/plugin-update-checker/Puc/v4p2/Vcs/PluginUpdateChecker.php:85
+msgid "There is no changelog available."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Project Panorama BuddyPress / BuddyBoss Integration"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.projectpanorama.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Integrate Project Panorama with BuddyBoss"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "SnapOrbital"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.projectpanorama.com"
+msgstr ""

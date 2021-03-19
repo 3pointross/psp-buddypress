@@ -1,0 +1,15 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 7, ../sass/psp-buddypress.scss */
+#buddypress #psp-projects {
+  background: transparent;
+}
+/* line 11, ../sass/psp-buddypress.scss */
+#buddypress .pspbb-group-list__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+}
