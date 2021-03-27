@@ -3,7 +3,7 @@
  * Plugin Name: Project Panorama BuddyPress / BuddyBoss Integration
  * Plugin URI: http://www.projectpanorama.com
  * Description: Integrate Project Panorama with BuddyBoss
- * Version: 1.0
+ * Version: 1.1
  * Author: SnapOrbital
  * Author URI: https://www.projectpanorama.com
  * License: GPL2
@@ -17,7 +17,7 @@ if( !function_exists('psp_get_option') || !function_exists('bp_is_active') ) {
 }
 
 $defintions = array(
-    'PSP_BB_VER'  =>  '1.0',
+    'PSP_BB_VER'  =>  '1.1',
     'PSP_BB_PATH' =>  plugin_dir_path( __FILE__ ),
     'PSP_BB_URL'  =>  plugin_dir_url( __FILE__ )
 );

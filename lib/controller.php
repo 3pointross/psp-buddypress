@@ -115,3 +115,15 @@ function psp_bb_update_user_admin_list( $args, $field, $post_id ) {
      return $args;
 
 }
+
+// add_action( 'init', 'psp_bb_custom_rewrite_rules', 100 );
+function psp_bb_custom_rewrite_rules() {
+
+     // Investigate why this isn't working...
+
+     global $bp;
+     $slug = psp_get_slug();
+
+     add_rewrite_rule( '^' . $bp->members->slug . '/([^/]+)/' . $slug . '/page/([0-9]+)?/?$', 'index.php?pagename=' . $bp->members->slug . '/' . '$matches[1]' . '/' . $slug . '&page=$matches[2]', 'top' );
+
+}
