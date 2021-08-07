@@ -12,6 +12,10 @@ function psp_bb_projects_tab() {
 
      if( bp_is_groups_component() ) {
 
+          if( !groups_is_user_member( bp_displayed_user_id(), bp_get_group_id() ) ) {
+               return;
+          }
+
           bp_core_new_subnav_item( array(
                'name' => __( 'Group Projects', 'psp_projects' ),
                'slug' => $slug,
@@ -157,9 +161,44 @@ function psp_bb_projects_content() {
      <?php
 }
 
+add_action( 'wp_enqueue_scripts', 'psp_bb_front_assets' );
 function psp_bb_front_assets() {
 
      wp_register_style( 'psp-buddypress', PSP_BB_URL . 'assets/css/psp-buddypress.css', array(), PSP_BB_VER );
      wp_enqueue_style( 'psp-buddypress' );
+
+}
+
+add_action( 'psp_after_documents', 'psp_bb_groups_on_project', 999, 5 );
+function psp_bb_groups_on_project() {
+
+     $post_id   = get_the_ID();
+     $group_ids = get_field( 'buddypress_groups', $post_id );
+
+     if( !$group_ids ) {
+          return;
+     } ?>
+
+     <div class="psp-bb-project-groups">
+          <div class="psp-h4 psp-box-title"><?php esc_html_e( 'Groups', 'psp_projects' ); ?></div>
+          <div class="psp-bb-project-groups__list">
+               <?php
+               foreach( $group_ids as $group_id ): $group = groups_get_group( $group_id); ?>
+                    <div class="psp-bb-project-group">
+                         <a class="psp-buddypress-group" href="<?php echo esc_url(bp_get_group_permalink($group)); ?>">
+                              <span class="psp-buddypress-group__name">
+                                   <?php echo esc_html( $group->name ); ?>
+                                   <span class="psp-buddypress-group__description">
+                                        <?php echo esc_html( $group->description ); ?>
+                                   </span>
+                              </span>
+                              <i class="fa fa-angle-right"></i>
+                         </a>
+                    </div>
+               <?php endforeach; ?>
+          </div>
+     </div>
+
+     <?php
 
 }
