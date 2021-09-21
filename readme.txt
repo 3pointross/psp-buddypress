@@ -1,6 +1,9 @@
 = Features =
 * Assign projects to groups, giving group members access and the ability to assign tasks / etc to group members
 
+= 1.2.1 =
+* Adds a check to make sure BuddyPress groups are enabled before making group changes
+
 = 1.2 =
 * Removes group projects tab if user doesn't have access
 * Adds a list of groups assigned to the project page

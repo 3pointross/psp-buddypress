@@ -12,7 +12,7 @@ function psp_bb_projects_tab() {
 
      if( bp_is_groups_component() ) {
 
-          if( !groups_is_user_member( bp_displayed_user_id(), bp_get_group_id() ) ) {
+          if( !groups_is_user_member( bp_displayed_user_id(), bp_get_group_id() ) && !current_user_can('manage_options') ) {
                return;
           }
 
