@@ -1,7 +1,7 @@
 = Features =
 * Assign projects to groups, giving group members access and the ability to assign tasks / etc to group members
 
-= 1.2.4 =
+= 1.2.6 =
 * Fixes bug with access to group projects
 
 = 1.2.3 =
