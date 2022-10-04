@@ -23,7 +23,6 @@ function psp_bb_projects_tab() {
                return;
           }
 
-
           bp_core_new_subnav_item( array(
                'name' => __( 'Group Projects', 'psp_projects' ),
                'slug' => $slug,

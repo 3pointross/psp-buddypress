@@ -10,12 +10,17 @@ function psp_add_buddyboss_groups_to_permissions( $fields ) {
                'type'    =>   'alphabetical',
                'per_page'     =>   -1
           );
-          $groups = BP_Groups_Group::get($args);
 
-          if( !empty($groups['groups']) ) {
+          if( class_exists('BP_Groups_Group') ) {
 
-               foreach( $groups['groups'] as $group ) {
-                    $choices[ $group->id ] = $group->name;
+               $groups = BP_Groups_Group::get($args);
+
+               if( !empty($groups['groups']) ) {
+
+                    foreach( $groups['groups'] as $group ) {
+                         $choices[ $group->id ] = $group->name;
+                    }
+
                }
 
           }
