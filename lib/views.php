@@ -10,11 +10,19 @@ function psp_bb_projects_tab() {
 
      $slug  = psp_get_option( 'psp_slug', 'panorama' );
 
-     if( bp_is_groups_component() ) {
+     if( bp_is_group() ) {
 
-          if( !groups_is_user_member( bp_displayed_user_id(), bp_get_group_id() ) ) {
+          $cuser = wp_get_current_user();
+
+
+          if( !bp_get_current_group_id() ) {
                return;
           }
+
+          if( !groups_is_user_member( $cuser->ID, bp_get_current_group_id() ) && !current_user_can('manage_options') ) {
+               return;
+          }
+
 
           bp_core_new_subnav_item( array(
                'name' => __( 'Group Projects', 'psp_projects' ),
@@ -29,7 +37,6 @@ function psp_bb_projects_tab() {
      }
 
      if( bp_is_user() ) {
-
 
           bp_core_new_nav_item( array(
                'name'              => __( 'Projects', 'psp_projects' ),
